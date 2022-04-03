@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+* {
+    font-family: 'Montserrat';
+}
+
+body,P{
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2{
+    margin: 0;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+li{
+    list-style-type: none;
+}
+
+body{
+    background-image: url(images/background.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.wrapper{
+    width: 700px;
+    height: auto;
+    margin: 0 auto;
+    margin-top:100px;
+    margin-bottom: 100px;
+    
+}
+
+.header{
+    border-radius: 30px;
+    width: auto;
+    background-color: rgba(132, 125, 229, 0.601);
+    text-align: center;
+    color: white;
+    box-shadow: 0 1px 10px 0 white;
+}
+
+.header img{
+    width: 180px;
+    border-radius: 36% 64% 63% 37% / 38% 44% 56% 62%  ;
+    border: 13px white solid;
+    margin: 50px 0 30px 0 ;
+}
+
+.header h1{
+    font-family: Permanent Marker;
+    font-size: 50px;
+    font-weight: bold;
+    
+}
+
+.header P{
+    display: inline-block;
+    margin: 30px 0 15px 0;
+    padding: 10px;
+    font-size: 18px;
+    border-top: 5px solid white;
+    font-weight: bold;
+}
+
+
+.main{
+    width: auto; 
+    background-color:rgba(132, 125, 229, 0.601);
+    /*블럭태그의 마진은 위아래가 병합되기 때문에 부모 
+    태그에overflow:hidden으로 해결*/
+    overflow: hidden;
+    margin-top: 20px;
+    border-radius: 15px;
+    box-shadow: 0 1px 10px 0 white;
+}
+
+
+.list {
+    background-color: rgba(255, 255, 255, 0.7);
+    margin: 25px;
+    overflow: hidden;
+    color: rgb(55, 55, 55);
+}
+
+.list h2{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px;
+}
+
+.list li{
+    width: 290px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.list li:hover{
+    background-color: rgba(132, 125, 229, 0.3);
+    font-size: 18px;
+}
+
+.icon{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    margin: 0 20px;
+    padding: 10px 10px;
+
+    /* 이미지 스프라이트 기법 => 웹 성능 */
+    background-image: url(images/icons.png);
+    text-indent: -9999px; /* IR기법 */
+    background-size: 180px 120px;
+
+}
+
+.footer{
+    text-align: center;
+    background-color:  rgb(206, 206, 206);
+    border-radius: 15px;
+    box-shadow: 0 1px 10px 0 white;
+    margin-top: 15px;
+}
+
+.icon.github{
+    background-position: left top;
+}
+
+.icon.facebook{
+    background-position: center top;
+}
+
+.icon.email{
+    background-position: right top;
+}

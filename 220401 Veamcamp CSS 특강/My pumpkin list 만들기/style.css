@@ -1,0 +1,89 @@
+body,ul{
+    padding: 0;
+    margin: 0;
+
+}
+
+h1{
+    margin: 0;
+    font-size: inherit; 
+    font-weight: inherit;
+}
+
+li{
+    list-style-type: none;
+}
+
+body{
+    background-image: url(images/pum_back.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+.wrapper{
+    background-color: rgb(255, 255, 255);
+    width: 400px;
+    height: auto;
+    margin: 100px auto;
+    border-radius: 15px;
+    box-shadow: 0 1px 10px 0 rgb(228, 228, 228);
+}    
+
+
+.header{
+   padding: 25px 0;
+   border-bottom: 1px solid rgb(168, 168, 168);
+  
+}
+
+.title{
+    font-size: 25px;
+    font-weight: bold;
+    border-left: 8px solid rgb(208, 108, 9);
+    padding-left: 12px;
+   
+
+}
+
+.main{
+    background-color: rgb(234, 234, 234);
+    width: auto;
+    padding: 20px 0;
+    
+    
+}
+
+
+.list img{
+    display: block;
+    width: 35px;
+    margin: 0 auto;
+}
+
+.list h1{
+    text-align: center;
+    font-weight: bold;
+    padding: 5px 0 10px 0;
+}
+
+.list li{
+border-radius: 5px;
+   border: 1px solid rgb(193, 193, 193);
+   box-shadow: 0 1px 5px 0 rgb(181, 181, 181);
+   width: 300px;
+   background-color: rgb(251, 194, 138);
+   padding: 10px;
+   margin: 0 auto;
+   margin-bottom: 15px;
+   font-weight: bold;
+   font-size: 15px;
+  
+}
+
+.list li:hover{
+    background-color: rgb(221, 126, 53);
+
+}
