@@ -50,14 +50,14 @@
         <fieldset class="box">
             <p>면접에서 자신의 포부를 한 문장으로 얘기한다면?</p>
             <form action="" method="post" class="interview1">
-                <input type="text" name="interview" placeholder="내 답변"">
+                <input required type="text" name="interview" placeholder="내 답변"">
             </form>
         </fieldset>
 
         <fieldset class="box">
             <p>당신은 지금 한 기업의 최종면접을 앞두고 있습니다. 면접장에 들어가기 직전, 자기 자신에게 해주고 싶은 말은?</p>
             <form action="" method="post" class="interview2" >
-                <input type="text" name="interview" placeholder="내 답변" >
+                <input required type="text" name="interview" placeholder="내 답변"  >
             </form>
         </fieldset>
 
@@ -65,7 +65,7 @@
             <p>다음 중 기술 면접 때 듣고 싶은 질문이 아닌 것은?</p>
             <form action="" method="post" class="tech-form">
                 <select name="tech" id="">
-                    <option value="">선택</option>
+                    <option value="" disabled>선택</option>
                     <option value="hi">hi</option>
                     <option value="hello">hello</option>
                     <option value="bye">bye</option>
@@ -91,7 +91,7 @@
             </form>    
         </fieldset>
 
-        <button class="submit">제출</button>
+        <button class="submit" type="submit">제출</button>
         <button class="reset" type="reset">
             <a href="#">양식 지우기</a>
         </button>
