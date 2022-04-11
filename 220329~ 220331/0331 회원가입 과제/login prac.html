@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link rel="stylesheet" href="login prac.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타벅스 로그인</title>
+</head>
+<body>
+    <header>
+        <img src="images/starbucks_logo.png" alt="스타벅스 로고"  width: 80px;>
+    </header>
+    <main>
+        <section class="container">
+            <section class="login" >
+                <p>회원가입</p>
+                <img class="picture" src="images/profile.JPG" alt="회원가입" > 
+
+                <fieldset>  
+                    <form action="" method="post">
+                        <label for="myId">ID</label>
+                        <input type="text" name="ID" id="myId"><br>
+                        <label for="myPassword">PASSWORD</label>
+                        <input type="text" name="password" id="myPassword"><br>
+                        <label for="checkPassword">CONFIRM PW</label>
+                        <input type="text" name="checkpassword" id="checkPassword"><br>
+                        <br>
+                    </form>   
+                    </fieldset>
+
+                    <fieldset>
+                    <form>
+                       <label for="favorite">☕ What's your favorite starbucks beverage?</label><br>
+                      
+                       <select size="1" name="beverage" id="favorite">
+                            <option value="아이스아메리카노">아이스아메리카노</option>
+                            <option  selected value="콜드브루오트밀라떼">콜드브루오트밀라떼</option>
+                            <option value="녹차프라푸치노">녹차프라푸치노</option>
+                            <option value="돌체라떼">돌체라떼</option>
+                            <option value="자몽허니블랙티">자몽허니블랙티</option>
+                       </select>
+                       
+                       <br><br>
+                       <label>Please choose your gender</label><br>
+                       <label for="female">female</label>
+                       <input type="radio" name="gender" value="female" id="female">
+                       <label for="male">male</label>
+                       <input type="radio" name="gender" value="male" id="male"><br><br>
+                       
+                       <label for="tel">telephone number</label>
+                       <input type="tel" name="tel" id="tel">
+
+                       <br><br>
+                       <button type="submit">회원가입하기</button>
+
+                    </form>    
+
+                    </fieldset>
+            </section>
+
+            
+        </section>
+    </main>
+
+
+</body>
+</html>

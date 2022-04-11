@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+   
+    <img src="images/cat.jpg" alt="고양이 개귀여워">
+    <!--이미지 경로 잘못 설정하면 이름으로 알려주고, 
+        구글 검색 봇도 alt내용을 기준으로 함-->
+
+
+        <!--
+        <img srcset="images/rabbit_500.png 500w,
+        images/rabbit_300.png 300w, images/rabbit_150.png 150w" sizes="(min-width:960px) 500px, (min-width:640px) 300px,
+        900px" src="images/rabbit_150.png" alt="rabbit"> -->
+
+    <picture>
+        <source srcset="images/rabbit_500.png"  
+        media="(min-width:960px)">
+
+         <source srcset="images/cat.jpg"
+         media="(min-width:640px)">
+         <img src="images/rabbit_150.png" alt="">
+    </picture>
+
+        
+
+</body>
+</html>
