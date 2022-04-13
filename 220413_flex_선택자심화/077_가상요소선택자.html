@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>가상 요소 선택자</title>
+    <style>
+        /*하나의 태그가 맨 끝에 만들어진다고 생각하면 됨*/
+
+        p::before {
+            content: '(❁´◡`❁) ';
+        }
+
+        p::after {
+            content: ' cm';
+        }
+    </style>
+</head>
+<body>
+    <p id="jun">10</p>
+</body>
+</html>
