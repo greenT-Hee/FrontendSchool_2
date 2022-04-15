@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body class="container">
+    <article class="start">
+        <h1 class=" text-center">나랑 닮은 세렝게티 동물은? ╰(*°▽°*)╯</h1>
+        <button type="button" class="btn btn-primary mt-5" onclick="start()">테스트 시작하기</button>
+    </article> 
+    <article class="question mt-5">
+        <div class="progress mt-5">
+            <div class="progress-bar" role="progressbar" style="width: calc(100/12*1%)"></div>
+        </div>
+        <h2 id="title" class="text-center mt-5">문제</h2>
+        <input id="type" type="hidden" value="EI" >
+        <button id="A" type="button" class="btn btn-primary mt-4">Primary</button>
+        <button id="B" type="button" class="btn btn-primary mt-3">Primary</button>
+    </article>
+    <article class="result">
+        <img id="img" class="rounded-circle mt-5" src="images/leo.png" alt="animal" >
+        <h2 id="animal" class="text-center mt-5">동물 이름</h2>
+        <h3 id="explain" class="text-center mt-3 mb-5">설명</h3>
+        <button class="reload" onClick="window.location.reload()">다시 검사하기</button>
+
+                <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                <div class="addthis_inline_share_toolbox share" ></div>
+            
+    </article>
+    
+
+    <input type="hidden" id="EI" value="0">
+    <input type="hidden" id="SN" value="0">
+    <input type="hidden" id="TF" value="0">
+    <input type="hidden" id="JP" value="0">
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <script>
+        var num = 1;
+        var q = {
+            1:{"title":"1번 문제", "type":"EI", "A":"E","B":"I"},
+            2:{"title":"2번 문제", "type":"EI", "A":"E","B":"I"},
+            3:{"title":"3번 문제", "type":"EI", "A":"E","B":"I"},
+            4:{"title":"4번 문제", "type":"SN", "A":"S","B":"N"},
+            5:{"title":"5번 문제", "type":"SN", "A":"S","B":"N"},
+            6:{"title":"6번 문제", "type":"SN", "A":"S","B":"N"},
+            7:{"title":"7번 문제", "type":"TF", "A":"T","B":"F"},
+            8:{"title":"8번 문제", "type":"TF", "A":"T","B":"F"},
+            9:{"title":"9번 문제", "type":"TF", "A":"T","B":"F"},
+            10:{"title":"10번 문제", "type":"JP", "A":"J","B":"P"},
+            11:{"title":"11번 문제", "type":"JP", "A":"J","B":"P"},
+            12:{"title":"12번 문제", "type":"JP", "A":"J","B":"P"}
+        }
+        
+        var result = {
+            "ISTJ": {"animal":"호랑이", "explain":"호기심이 많고 용의주도한 전략가 유형","img":"images/tiger.png"},
+            "ISFJ": {"animal":"사슴", "explain":"조용하고 내성적이며 가족에 대한 애착이 강하며 인간관계 형성이 뛰어난 이타주의자","img":"images/deer.png"},
+            "INFJ": {"animal":"판다", "explain":"가장 흔치 않은 성격 유형으로 섬세하고 조용하고 신비로움","img":"images/panda.png"},
+            "INTJ": {"animal":"코뿔소", "explain":"가장 다수의 사람이 속하는 성격 유형으로 재빠르고 신중하며 조직에서 핵심 구성원 역할","img":"images/코뿔소.png"},
+            "ISTP": {"animal":"곰", "explain":"주변을 탐색하는 것을 좋아하는 호기심쟁이","img":"images/teddy-bear.png"},
+            "ISFP": {"animal":"고양이", "explain":"탐험이나 실험 정신이 뛰어난 만능 재주꾼","img":"images/cat.png"},
+            "INFP": {"animal":"앵무새", "explain":"언어적 소질이 뛰어난 긍정적인 이상주의자","img":"images/penguin.png"},
+            "INTP": {"animal":"부엉이", "explain":"몽상을 좋아하는 사색가","img":"images/부엉이.jpg"},
+            "ESTP": {"animal":"공작새", "explain":"주변의 이목을 끄는 것을 좋아하는 모험가","img":"images/funny-bird.png"},
+            "ESFP": {"animal":"돌고래", "explain":"흥이 많고 스타성을 타고난 자유로운 영혼","img":"images/dolphin.png"},
+            "ENFP": {"animal":"원숭이", "explain":"자유를 즐기고 타인을 즐겁게 해주는 사교적인 타입","img":"images/monkey.png"},
+            "ENTP": {"animal":"여우", "explain":"자유분방한 사고로 상대를 꿰뚫고 주변을 아군으로 만드는 스타일","img":"images/fox.png"},
+            "ESTJ": {"animal":"보더콜리", "explain":"질서를 중시하며 군중을 단결시키는 관리자 유형","img":"images/dogs.png"},
+            "ESFJ": {"animal":"말", "explain":"주위 사람들과 잘 어울리는 인기쟁이","img":"images/horse.png"},
+            "ENFJ": {"animal":"코끼리", "explain":"사이좋은 공동체를 만드는 것에 행복을 느끼는 열정가","img":"images/elephant.png"},
+            "ENTJ": {"animal":"사자", "explain":"천성적으로 타고난 리더상으로 카리스마와 자신감이 넘치는 통솔자","img":"images/leo.png"}
+        }
+        function start (){
+            $('.start').hide();
+            $('.question').show();
+            next();
+        }
+
+        $('#A').click(function(){
+            var type =  $('#type').val();
+            var preValue = $('#'+type).val();
+            $("#" + type).val(parseInt(preValue) + 1);
+            next();
+        });
+
+        $("#B").click(function(){
+            next();
+        });
+        
+        function next(){
+            if(num == 13){
+                $('.question').hide();
+                $('.result').show();
+                var mbti ="";
+                ($('#EI').val() <2) ? mbti+="I" : mbti+= "E";
+                ($('#SN').val() <2) ? mbti+="N" : mbti+= "S";
+                ($('#TF').val() <2) ? mbti+="F" : mbti+= "T";
+                ($('#JP').val() <2) ? mbti+="P" : mbti+= "J";
+                /*alert(mbti); */
+                $('#img').attr('src',result[mbti]["img"]);
+                $('#animal').html(result[mbti]["animal"]);
+                $('#explain').html(result[mbti]["explain"]);
+            
+            }
+            else {
+            $('.progress-bar').attr('style','width: calc(100/12*'+num+'%)');
+            $('#title').html(q[num]["title"]);
+            $('#type').val(q[num]["type"]);
+            $('#A').html(q[num]["A"]);
+            $('#B').html(q[num]["B"]);
+            num++;
+        }
+        }
+    </script>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-62592979fd78e631"></script>
+
+</body>
+</html>
