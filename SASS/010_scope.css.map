@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,IAAI,CAAA;EAEA,KAAK,EADI,GAAG;CAKf;;AAND,AAGI,IAHA,CAGA,IAAI,CAAA;EACA,KAAK,EAHA,GAAG;CAIX;;AAGL,AAAA,KAAK,CAAA;EAED,KAAK,EADI,GAAG;CAKf;;AAHY,AAAD,KAAM,CAAA;EACV,KAAK,EAHA,GAAG;CAIX",
+    "sources": [
+        "010_scope.scss"
+    ],
+    "names": [],
+    "file": "010_scope.css"
+}

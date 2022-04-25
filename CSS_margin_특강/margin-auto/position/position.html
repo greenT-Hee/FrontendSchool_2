@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <title>Position Mini Example</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            body {
+                background-color: #666;
+            }
+            .grand-father {
+                background-color: #bbb;
+                width: 800px;
+                margin: 0 auto;
+                padding: 1px;
+                position: relative;
+            }
+            .father {
+                background-color: white;
+                width: 300px;
+                height: 200px;
+                margin: 50px auto;
+                
+            }
+            .children {
+                width: 100px;
+                height: 100px;
+                /*부모가 static이면 뷰포트 기준으로 움직임*/
+                position: absolute;
+                left:50%;
+                top:50%;
+                transform:translate(-50%,-50%) ;
+            }
+
+            .pos{
+                background-color: orange;
+                position: absolute; /*마치 인라인처럼 보이게 됨, 그러나 인라인이 아니라는점!! 사용공간은 자기 콘텐츠 크기가만큼으로 줄어든 것*/
+                top:0;
+                left:0;
+                /*사용 가능 공간이 위.오른쪽으로 죽 늘어남, 컨테이닝블럭크기만큼*/
+                right: 0; 
+                bottom: 0;
+                /*단축속성 inset:상/우/하/좌 근데 IE 또 */
+
+                width: 100px;
+                height: 100px;
+                margin: auto;
+                
+
+                border-radius: 50%;
+                box-shadow: inset 10px 10px 10px rgba(255,255,255,0.4), 10px 10px 10px rgba(0, 0, 0, 0.2);
+            }
+        </style>
+	</head>
+	<body>
+
+        <div class="grand-father">
+            <div class="father">
+                <!-- <img class="children" src="img.png"> -->
+                <div class="pos">pos</div>
+            </div>
+        </div>
+	</body>
+</html>
+
+<!--
+    1. postion: absolute일 때 (컨테이닝블록)
+    부모에 뷰포트가 없다면 뷰포트 기준으로 ,
+    부모가 static이 아니라면 부모 기준으로
+    2. translate:transform은 자기 자신의 width, height 기준
+-->
+
+
+<!--
+    normal-flow가 아닌 float flex는 블럭레벨이 된다~
+-->

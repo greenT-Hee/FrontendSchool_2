@@ -1,0 +1,24 @@
+.item{
+    background-color: lightgreen;
+    /*margin-left:auto;남은 공간: div가 사용 가능한 공간, 자신의 너비, 마진 등*/
+    /* width: 100%; 똑같이 부모 컨테이닝 블럭 기준은 같음, 장점음 %로 크기 조절이 유연하다~ , 반응형웹에 유용*/
+    /*width: auto; 컨테이닝 블럭 기준, 자기 부모*/
+    height: auto; /*자식 요소에 따라*/
+    /* box-sizing: border-box; */
+    padding: 40px;
+
+}
+/* % 이면 padding 이 +알파되면 전체 크기가 커져버린다
+auto 이면 정해진 width 값을 고정해서  */
+
+.item:nth-child(odd){
+    margin-left: 50%;
+}
+
+.item:nth-child(even){
+    margin-right: 50%;
+}
+
+
+
+

@@ -1,0 +1,24 @@
+ol li:nth-child(1) {
+  background: white;
+  color: red;
+}
+
+ol li:last-child(2) {
+  background: white;
+  color: green;
+}
+
+ol li:last-child(3) {
+  background: white;
+  color: blue;
+}
+
+ul li:hover {
+  background: white;
+  cursor: pointer;
+}
+
+ul li:last-child {
+  border-bottom: 2px solid black;
+}
+/*# sourceMappingURL=004_부모선택자엠퍼센트2.css.map */

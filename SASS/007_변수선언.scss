@@ -1,0 +1,19 @@
+//$변수 : 값
+$taehee1 : #FFF;
+$taehee2 : #F00;
+$태희 : #00F;
+$큰글자: 32px;
+
+
+.one {
+    font-size: $큰글자;
+    color: $taehee1;
+}
+
+.two {
+    color: $taehee2;
+}
+
+.three {
+    color: $태희;
+}

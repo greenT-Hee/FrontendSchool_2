@@ -1,0 +1,11 @@
+.one{
+    $value : red !global; 
+    color: $value;
+    .two{
+        color: $value; 
+    }
+}
+
+.three{
+    color: $value; //!global이기 때문에 레드가 가능, 사용 지양(협업 때 매우 불편함,,개인 작업에서도 혼자 헷갈림)
+}

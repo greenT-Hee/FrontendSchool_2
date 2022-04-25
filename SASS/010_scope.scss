@@ -1,0 +1,17 @@
+.one{
+    $value : red; //지역변수, 지역에서만 사용 가능!
+    color: $value;
+    .two{
+        color: $value; 
+    }
+}
+
+.one_{
+    $value : red; //지역변수, 지역에서만 사용 가능!
+    color: $value;
+    @at-root .two_{
+        color: $value; 
+    }
+}
+
+

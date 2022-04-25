@@ -1,0 +1,12 @@
+//잘못된 사용예
+$centerxy:red;
+
+@mixin name {
+    display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.one{
+    color: $centerxy;
+}
