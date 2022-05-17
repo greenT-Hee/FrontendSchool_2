@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+
+
+
+    <script>
+        //숫자형
+        // var 변수하나 = 20;
+        // var 변수둘 = 10;
+        // var 변수셋 = 2;
+
+        // document.write('변수하나 : ', 변수하나);
+        // document.write('<br>');
+        // document.write('변수둘 : ', 변수둘);
+        // document.write('<br>');
+        // document.write('변수셋 : ', 변수셋);
+        // document.write('<br>');
+        // document.write('변수하나+변수둘 : ', 변수하나+변수둘);
+        // document.write('<br>');
+        // document.write('변수하나-변수둘 : ', 변수하나-변수둘);
+        // document.write('<br>');
+        // document.write('변수하나/변수둘 : ', 변수하나/변수둘);
+        // document.write('<br>');
+        // document.write('변수하나*변수둘 : ', 변수하나*변수둘);
+        // document.write('<br>');
+        // // **는 제곱 --> 20의 2제곱
+        // document.write('변수하나**변수셋 : ', 변수하나**변수셋);
+        // document.write('<br>');
+        // // 나머지
+        // document.write('변수하나%변수셋 : ', 변수하나%변수셋);
+
+
+                //ES6
+        // const 이름 = '이호준';
+        // const 소속 = '제주코딩베이스캠프 운영진입니다.'
+
+        // let 주소 = '서울';
+        // 주소 = '제주';
+
+        // document.write(이름, '<br>');
+        // document.write(소속, '<br>');
+        // document.write(주소, '<br>');
+        // // [] index번호는 0부터 시작, 띄어쓰기도 문자열 포함
+        // document.write(소속[2], '<br>');
+        // document.write(소속[3], '<br>');
+
+        // const 이름 = '김태희';
+        // const 소속 = '멋쟁이 사자들 FE 2기';
+
+        // let 주소 = '춘천';
+        // 주소 = '서울';
+
+        // document.write(이름, '<br>');
+        // document.write(소속, '<br>');
+        // document.write(주소, '<br>');
+        // // [] index번호는 0부터 시작, 띄어쓰기도 문자열 포함
+        // document.write(소속[2], '<br>');
+        // document.write(소속[6], '<br>');
+
+
+        //숫자형 (Number)
+        var num = 10;
+
+        document.write(num, '<br>');  // 10
+        document.write(num/3, '<br>');  // 3.3333..
+        document.write(parseInt(num/3), '<br>');  // 3
+
+        /* 숫자형의 사칙연산 */
+        // 우선순위는 곱, 나누기 > 덧셈 ,뺄셈
+        // 우선순위는 ()로 조정 가능
+        document.write("더하기 : ", 2 + 2.5, '<br>');  // 4.5
+        document.write("빼기 : ", 5 - 7, '<br>');  // -2
+        document.write("곱하기 : ", 3 * 2, '<br>');  // 6
+        document.write("나누기 : ", 2/2, '<br>'); // 1
+
+        /*특수 숫자 값*/
+        document.write("무한대 : ", 1/0,'<br>'); // Infinity
+        document.write( "숫자가 아님" / 2,  '<br>' ); // NaN
+        // NaN, 문자열을 숫자로 나누면 오류가 발생합니다.
+        //isNan(데이터)로 숫자인지 아닌지 알 수 있음, true: 숫자
+
+        // 부동소수점 (모든 소숫점이 그런 건 아님)
+        document.write(0.1 + 0.2 == 0.3, '<br>'); //false 
+        // Big.js, BigNumber.js, Decimal.js, Math.js 등으로 해결할 수 있습니다. --> 부동소수점 해결 라이브러리
+
+        document.write(9999999999999999999, '<br>'); // 10000000000000000000
+        //이유는 Number.Max_SAFE_INTEGER 값이 90071... : 최대 안전하게 처리할 수 있는 정수 
+        // Bigint로 해결하기(MDN 참고)
+    </script>
+</body>
+</html>

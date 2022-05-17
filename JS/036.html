@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+        // 일반 함수의 this: 나를 호출한 객체 
+        // 생성자 함수 안의 this: 인스턴스 참조 (여기서는 robot1)
+        // function NewFactory(name){
+        //     this.name = name; 
+        //     this.sayYourName = function(){
+        //         console.log(`삐리리리 제 이름은 ${this.name}입니다.`);
+        //     }
+        // }
+
+        
+        // const robot1 = new NewFactory('김태희');
+        // const robot2 = new NewFactory('브랜든')
+        // console.log(robot1.name);
+        
+
+        //실습
+        // const drink = [
+        //     '아이스아메리카노',
+        //     '아이스카페라뗴',
+        //     '아이스녹차라뗴',
+        //     '아이스모카라떼',
+        //     '블랙버블티',
+        //     '녹차자바칩프라푸치노',
+        //     '아이스바닐라라떼'
+        // ]
+
+        // function CafeBot(menuNames){
+        //     this.menu = menuNames;
+        //     this.sayMenu = function(){
+        //        console.log(this.menu[Math.floor(Math.random() * this.menu.length)]); //0~6.99999
+        //     }
+        // }
+        // const cafebot1 = new CafeBot(drink);
+        // const cafebot2 = new CafeBot(drink);
+        //newbot1.sayYourName === newbot2.sayYourName --> false
+
+    </script>
+</body>
+</html>

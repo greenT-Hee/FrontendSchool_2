@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <!-- 2개가 영향을 끼칩니다. -->
+    <script src="a.js"></script>
+    <script src="b.js"></script>
+    <script>
+        // 1번 script
+        console.log(함수(10, 20));
+        console.log(변수); // 뒤의 b의 변수가 덮어씐다. 하지만 var이기 때문에 에러잡기가 어렵다
+        
+        b()
+        function a(){
+            console.log('a')
+        }
+    </script>
+    <script>
+        // 2번 script
+        a()
+        function b(){
+            console.log('b')
+        }
+        //a는 위에 함수가 선언되어 실행이되었고, b는 그렇지 못함
+    </script>
+
+</body>
+</html>

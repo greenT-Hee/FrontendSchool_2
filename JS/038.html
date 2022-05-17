@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+        function Parent(){
+            this.name = '태희';
+        }
+        Parent.prototype.rename = function(name){
+            this.name = name;
+        }
+
+        Parent.prototype.sayName = function(){
+            console.log(this.name);
+        }
+
+        function Child(){
+            Parent.call(this);
+        }
+
+        Child.prototype = Object.create(Parent.prototype);
+        Child.prototype.canWalk = function(){
+            console.log('걷는다')
+        }
+
+        //콘솔창
+        // const child = new Child();
+        // undefined
+        // child.name;
+        // '태희'
+        // child.sayName()
+        // 038.html:19 태희
+        // undefined
+        // child.rename('영웅')
+        // undefined
+        // child.name
+        // '영웅'
+
+
+
+
+        // const child2 = new Child();
+        // undefined
+        // child2.sayName()
+        // 038.html:19 태희
+        // undefined
+        // child2.rename('대표님')
+        // undefined
+        // child2.name
+        // '대표님'
+        // child2.canWalk()
+        // 038.html:28 걷는다
+        // undefined
+        // const parent = new Parent();
+        // undefined
+        // parent.canWalk
+        // undefined
+        // parent.canWalk(); // 자식으로부터 상속받지는 못 함
+    </script>
+</body>
+</html>

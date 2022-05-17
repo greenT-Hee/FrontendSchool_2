@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <article class="parent">
+        <ol>
+            <li><button class="btn-first" type="button">버튼1</button></li>
+            <li><button type="button">버튼2</button></li>
+            <li><button type="button">버튼3</button></li>
+        </ol>
+    </article>
+
+    <script>
+        const btnFirst = document.querySelector('.btn-first');
+        //이벤트핸들러 = 이벤트리스너라고 부른다
+        btnFirst.addEventListener('click', (event) => {
+            console.log(event); //event는 자동완성으로 만들어진 것, 이름은 내 마음대로 바꿔도 됨, e로 많이 씀
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <!-- preventDefault() -->
+
+    <!-- 앵커의 기본 동작을 중지 -->
+    <!-- <a href="https://www.naver.com" class="link">네이버 링크입니다만..</a>
+    <script>
+        const link = document.querySelector('.link');
+        link.addEventListener('click', (event) => {
+            console.log('clicked');
+            event.preventDefault();
+        })
+    </script> -->
+
+    <!-- submit 의 기본 동작을 중지 -->
+    <!-- <form action="">
+        <button type="submit" class="submit">제출</button>
+    </form>
+    <script>
+        const submit = document.querySelector('.submit');
+        submit.addEventListener('click', (event) => {
+            console.log('clicked');
+            event.preventDefault();
+            //일단 기능을 막고 나중에 ajax와 통신할 떄 새로고침을 방지
+        })
+    </script> -->
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo7TKqmcfbxhvSRqKPjfe0kMRmrkY99xjt8Q&usqp=CAU" art="피카츄">
+
+    <script>
+        const img = document.querySelector('img');
+        img.addEventListener('contextmenu',() => {
+            alert('우클릭 멈춰! (σ｀д′)σ');
+            event.preventDefault();
+        }
+        )
+    </script>
+</body>
+</html>

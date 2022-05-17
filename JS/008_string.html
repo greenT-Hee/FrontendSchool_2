@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+        //문자열(string)
+
+        let txt = 'ABCDEFGHIJKLNMABC';
+        let text_two = "mom said \'hello world\'";
+        let text_three = "mom said 'hello world\'";
+        let number = '100';
+
+        //숫자로 변환
+        document.write(number + number,'<br>');
+        document.write(Number(number) + Number(number),'<br>');
+        document.write(parseInt(number) + parseInt(number),'<br>');// 이거 사용 추천
+        document.write(+number + +number,'<br>')
+
+        document.write(`txt : ${txt}`,'<br>');
+        //문제//
+        document.write(`${number} +  ${number} <br>`);
+        //템플릿 literal ei 지원 노
+        // document.wirte(number, '+', number,'=', number*22);/
+
+        document.write(number + number,'<br>');
+        document.write(number + 10,'<br>');
+        document.write(number - 10,'<br>');
+        document.write(number * 10,'<br>');
+
+        document.write(`txt.length : ${txt.length} <br>`);
+        document.write(`txt[1] : ${txt[1]} <br>`);
+
+        document.write(txt.indexOf("F"),'<br>');
+        document.write(`txt.indexOf("F"): ${txt.indexOf("F")}`);
+        //indexOf는 정규표현식으로 허용하지 않는다.
+        document.write(`txt.search("F"): ${txt.search("F")} <br>`);
+        document.write(`txt.search("FG"): ${txt.search("F")} <br>`);
+        document.write(`txt.search("FG"): ${txt.search("F")} <br>`);
+
+        document.write(`txt.search("Z"): ${txt.search("z")} <br>`);
+        document.write(`txt.search("Z"): ${txt.search("z")} <br>`);
+
+        let regExp = /CD/;
+        // document.write('txt.search(regExp) : ${txt.search(regExp)}`);
+        document.write(`txt.lastIndexOf : ${txt.lastIndexOf("F")} <br>`);
+        document.write(`txt.lastIndexOf : ${txt.lastIndexOf("FGH")} <br>`);
+        document.write(`txt.lastIndexOf : ${txt.lastIndexOf("B")} <br>`);
+        document.write(`txt.indexOf : ${txt.lastIndexOf("B")} <br>`);
+        // document.write(txt[0]+txt[1]+txt[2],<br>);
+        // // document.write(txt[0], txt[1], txt[2], '<br>');
+
+
+        //slice(시작인덱스, 종료인덱스) : 시작인덱스부터 종료인덱스 -1까지 반환 
+        //sunstr(시작위치, 길이) : 시작인덱스부터 길이만큼 반환
+        document.write(`txt.slice(0, 3) : ${txt.slice(0,3)}`);
+        document.write(`txt.substring(0, 3) : ${txt.substring(3,0)} <br>`);
+        document.write(`txt.substr(0,3) : ${txt.substr(0,3)} <br>`);
+
+        document.write('abcdef'.replace('cde','hojun'));
+        //정규표현식에서 한 번 더 다뤄드립니다.
+        document.write(`txt.replace('ABC', 'hojun') : ${txt.replace(/ABC/g, 'hojun')} <br>`);
+
+        document.write(`br><hr><br>`);
+        document.write(`txt.toUpperCase() : ${txt.toUpperCase()} <br>`);
+        document.write(`txt.toLowerCase() : ${txt.toLowerCase()} <br>`);
+
+        document.write(`br><hr><br>`);
+
+        document.write(txt.includes('z'),'<br>');
+        document.write(txt.includes('BC'),'<br>');
+        document.write(txt.startsWith('BCD'), '<br>');
+        document.write(txt.startsWith('ABC'), '<br>');
+        document.write(txt.endsWith('AB'), '<br>');
+        document.write(txt.endsWith('ABC'), '<br>');
+    </script>
+</body>
+</html>

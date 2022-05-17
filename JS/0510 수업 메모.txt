@@ -1,0 +1,25 @@
+구조분해할당
+https://ko.javascript.info/destructuring-assignment
+함수
+https://ko.javascript.info/function-basics
+
+함수 장점
+- 재사용성
+- 코드 구조 파악 용이
+
+hoisting 호이스팅(용어 일단 알아두기)
+
+재귀함수
+메모리 효율을 for문처럼 메모리 낭비 없이 사용하기 위해 
+메모이제이션 -> for문보다 직관적?
+
+재귀함수~피보나치까지 그냥 냅다 암기 바람
+
+call by vlaue/ reference
+call by vlaue: 값이 넘어감, 
+call by reference: 주소가 복사되어 넘어감, 수정 가능/ array
+
+array나 object를 값을 넘기면 값이 수정이 된다.(R)
+하지만 나머지는 절대 값이 변경되지 않는다.(V)
+
+

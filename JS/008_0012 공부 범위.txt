@@ -1,0 +1,204 @@
+자료구조
+
+스택(LIFO)
+-후입선출
+큐(FIFO)
+-선입선출
+
+54321 -> [] -> ??
+스택(stack)인 것은? 다 맞음 
+12345
+54321
+32154
+32145
+12435
+
+*이것만 공부하세요 일단*
+let txt = 'ABCDEFGHIJKLMNABC';
+
+document.write(parseInt(number) + parseInt(number), '<br>');
+document.write(`txt.length : ${txt.length}<br>`);
+document.write(`txt[1] : ${txt[1]}<br>`);
+document.write(`txt.slice(0, 3) : ${txt.slice(0, 3)}<br>`);
+document.write(`txt.replace('ABC', 'hojun') : ${txt.replace('ABC', 'hojun')} <br>`);
+
+---
+
+let value1 = 30;
+let value2 = 50;
+
+console.log(value1 > value2);
+console.log(value1 >= value2);
+console.log(value1 < value2);
+console.log(value1 <= value2);
+
+---
+
+console.log(value1 == value2);
+console.log(value1 === value2);
+
+---
+
+console.log(`1 ${!!undefined}`);
+console.log(`2 ${!!null}`);
+console.log(`3 ${!!NaN}`);
+
+---
+
+let person = {
+            name: '이호준',
+            age: 10,
+}
+
+document.write(`제 이름은 ${person.name} 입니다.<br>`);
+
+0503
+<객체자료형 = 참조자료형 특징>
+객체를 생성하여 값을 할당하고 그 값을 복제하면 “값 자체”를 복제하는 것이 아니라 그 값이 위치한 ‘주소’를 복사합니다. 객체 자료형을 “참조 자료형”으로 부르는 이유도 이와 같습니다
+
+* 원시자료형: 중간에 val이 바껴도 이미 복사(할당)된 경우 반영이 안됨, 다른 방을 씀
+* 객체자료형: 같은 공간을 씀 , 서로 변수가 바뀌면 공유하고 즉각 반영 =참조
+
+<생성자 함수/리터럴함수>
+생성자: new String = ''
+이렇게 안 만들어도 
+리터럴 '' (''만 써도 string임을 인식하는 것)
+
+- 객체자료형의 생성자 함수 
+생성자: new Object =
+리터럴: {}
+
+--------------------------------------------------
+오늘 중요 개념 1) 함수 2) 조건문
+
+1. 함수란 무엇인가?
+여러차례 반복해야하는 코드 뭉치를 묶어서 하나의 이름으로 표현한것!
+라면함수 
+function (인수/인자){};
+인수/인자를 매개변수라고 부르기도 한다. 
+!파선아실!
+- 실행함수 주머니의 명칭: 인자, 인수, argument
+- 선언함수 주머니의 명칭:  매개변수, parameter
+
+function double(num){
+    num * 2;
+}
+ double(5); 
+ -->만 쓰면 undefined가 나옴
+
+function double(num){
+    return num * 2;
+}
+double(5); 
+var val = double(5);
+val = 10;
+--> return을 넣어줘야 10이 제대로 나옴
+
+function double(num){
+    myFunc();
+    return;
+}
+function myFunc(); 
+--> 외부 함수를 넣을 때는, 단순 실행이라면 return 필수는 X
+값을 꺼내고자 할 때는 return을 사용/ 함수를 종료시키는 역할도 있음
+그래서 return을 넣으려면 아래에다가 넣어야 함
+
+
+2. 조건문
+if(조건식) {
+    console.log('hello world');
+}
+if(true) {
+    console.log('hello world');
+}
+--> 투루시어야 값이 출력됨
+
+
+트루시/폴시
+참으로 평가되는 값 / 거짓으로 평가되는 값을
+폴시: 0, ‘’, undefined, null, NaN, false
+
+if(true) {
+    console.log('hello world');
+}else if{
+    console.log('hello world2222');
+}else if{
+    console.log('hello world2222');
+}else
+
+* else if는 여러개 사용 가능
+* 마지막엔 무조건 else
+
+3. 배열이란? 데이터의 집합
+객체 = {key: value, key:value}
+배열 = [a,b,c,d]
+-> 배열의 각 값은 원소(element) 혹은 요소 라고 부릅니다.
+- 프로퍼티 중 함수인걸 메소드
+
+
+배열의 리터럴 
+var MyArr = [a,b,c,d];
+
+배열의 생성자 함수 (보통 사용하지 않음)
+var MyArr = new Array(5); 
+- 값을 1개: 개수가 5개인 배열이지만 아무 수는 없다 
+var MyArr = new Array(5,4,6,2);
+- 값이 2개 이상: 그대로 배열응ㄹ 보여줌 
+
+
+접근 방법
+var MyArr = [a,b,c,d];
+MyArr[1] = b;
+
+
+값 바꾸기 
+* 사진
+
+
+
+[정리]
+* 데이터의 집합. 여러개의 값을 하나의 이름으로 묶어 사용할 수 있게 도와줍니다.
+* 배열의 각 값은 원소(element) 혹은 요소 라고 부릅니다.
+* 배열의 크기는 length 프로퍼티를 통해 알 수 있습니다.
+* 배열의 생성자 함수에 숫자를 한개만 넣으면 인스턴스의 길이를, 여러 숫자를 넣으면 배열의 원소를 뜻합니다.
+* 배열에도 리터럴 표현이 있습니다.(  [  ]  ) 
+* 각괄호 + 인덱스를 통해 각 원소에 접근 할 수 있으며, 원소에 값을 저장 할 수도 있습니다. 심지어 존재하지 않는 원소에도 접근이 가능합니다.
+* 리터럴 생성과 동시에 원소에 접근 할 수도 있습니다. ([1,2,3,][0] === 1)
+
+
+배열 주요 method
+1. pop
+- 반환도 한다 
+- 마지막 배열을 뺀다
+* 어제 예시 활용하기
+
+pop() :  배열에서 마지막 요소를 제거하고 그 요소를 반환합니다.
+제거 한 요소를 보관하고 싶다면 변수에 담아 둘 수 있습니다.
+빈 배열에 pop을 호출하면 undefined를 호출합니다.
+
+
+2. push 
+- 배열의 마지막 요소로 인자로 추가
+- 새로운 배열의 길이를 반환합니다.
+var val = [];
+val.push('hello');
+val = ['hello'];
+
+문제
+철수가 심부름을 받았습니다! 어머니께서 마늘, 양파, 배추를 사오라고 하는군요. 집에 왔더니 오늘 필요한 재료는 배추라고 합니다! 어머니에게 배추를 주세요!
+
+3. spllice
+문제 
+var fish = ['정어리', '고등어', '돌고래', '참치', '고래상어', '코끼리'];
+        // 1. splice 를 이용해 코끼리를 제거해보세요
+        // 2. 참치 다음에 다금바리를 추가해보세요
+        // 3. 돌고래를 제거하고 옥돔과 갈치를 추가해보세요
+
+
+4. slice
+기존 데이터는 그대로 변형시키지 않고, 잘라낸 것은 새로운 변수에 저장해서 써야 한다.
+
+slice() : 두 개의 인자를 전달하여 배열안에 있는 요소를 새로운 배열로 반환합니다. 원본 요소가 바뀌지 않는것이 포인트! 특히 두 번째 인자에 해당하는 인덱스의 아이템은 포함하지 않습니다.
+fish.slice(2,3)
+
+5. 배열 정렬(하이라이트)

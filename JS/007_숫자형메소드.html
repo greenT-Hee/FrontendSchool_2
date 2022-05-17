@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+        // Number 관련 함수
+        let n = 10000;
+        let nFloat = 10000.123123123;
+        let s = '10,000,000';
+
+        document.write(`n : ${n} <br>`);
+        // 쉼표
+        document.write(`n.toLocaleString() : ${n.toLocaleString()} <br>`);
+        document.write(`s : ${s} <br>`);
+        document.write(`s.replace(/,/g, '') : ${s.replace(/,/g, '')} <br>`);
+        document.write(`parseInt(s, 10) : ${parseInt(s, 10)} <br>`);
+
+        document.write(`n.toFixed(10) : ${n.toFixed(10)} <br>`);
+        document.write(`nFloat.toFixed(3) : ${nFloat.toFixed(3)} <br>`);
+
+        //number: 생성자함수, 넘버타입으로 변환
+        document.write(`Number(true) : ${Number(true)} <br>`);
+        document.write(`Number(false) : ${Number(false)} <br>`);
+        document.write(`Number('') : ${Number('')} <br>`);
+        document.write(`Number(' ') : ${Number(' ')} <br>`);
+        document.write(`Number('hello') : ${Number('hello')} <br>`);
+        document.write(`Number('10 20') : ${Number('10 20')} <br>`);
+        document.write(`Number('10     ') : ${Number('10     ')} <br>`);
+        document.write(`Number('     10') : ${Number('     10')} <br>`);
+        document.write(`Number('     10     ') : ${Number('     10     ')} <br>`);
+
+
+        // math는 JS 내장 객체
+        // Math.속성(인자)
+        document.write(`Math.PI : ${Math.PI} <br>`);
+        //round:반올림
+        document.write(`Math.round(4.7) : ${Math.round(4.7)} <br>`);
+        // ceil: 올림
+        document.write(`Math.ceil(4.7) : ${Math.ceil(4.7)} <br>`);
+        // floor: 내림
+        document.write(`Math.floor(4.7) : ${Math.floor(4.7)} <br>`);
+        // pow: 2의 8승 
+        document.write(`Math.pow(2, 8) : ${Math.pow(2, 8)} <br>`);
+        // sqrt: 제곱근 
+        document.write(`Math.sqrt(64) : ${Math.sqrt(64)} <br>`);
+        // abs: 절댓값(absolute)
+        document.write(`Math.abs(-5) : ${Math.abs(-5)} <br>`);
+        // random() : 0~0.99999..숫자 중 랜덤(자주 사용)
+        document.write(`Math.random() : ${Math.random()} <br>`);
+        // max: 가장 큰 값
+        document.write(`Math.max(10, 20, 30, 40, 50) : ${Math.max(10, 20, 30, 40, 50)} <br>`);
+        //min: 가장 작은 값
+        document.write(`Math.min(10, 20, 30, 40, 50) : ${Math.min(10, 20, 30, 40, 50)} <br>`);
+    </script>
+</body>
+</html>
