@@ -8,25 +8,25 @@
 </head>
 <body>
     <script>
-        function Parent(){
-            this.name = '태희';
-        }
-        Parent.prototype.rename = function(name){
-            this.name = name;
-        }
+        // function Parent(){
+        //     this.name = '태희';
+        // }
+        // Parent.prototype.rename = function(name){
+        //     this.name = name;
+        // }
 
-        Parent.prototype.sayName = function(){
-            console.log(this.name);
-        }
+        // Parent.prototype.sayName = function(){
+        //     console.log(this.name);
+        // }
 
-        function Child(){
-            Parent.call(this);
-        }
+        // function Child(){
+        //     Parent.call(this);
+        // }
 
-        Child.prototype = Object.create(Parent.prototype);
-        Child.prototype.canWalk = function(){
-            console.log('걷는다')
-        }
+        // Child.prototype = Object.create(Parent.prototype);
+        // Child.prototype.canWalk = function(){
+        //     console.log('걷는다')
+        // }
 
         //콘솔창
         // const child = new Child();
@@ -61,6 +61,52 @@
         // parent.canWalk
         // undefined
         // parent.canWalk(); // 자식으로부터 상속받지는 못 함
+
+
+        function Boss(){
+            this.name = '보스태희';
+        }
+        Boss.prototype.rename = function(name){
+            this.name = name;
+        }
+
+        Boss.prototype.sayName = function(){
+            console.log(this.name);
+        }
+
+        const boss = new Boss();
+
+        // boss.name
+        // '보스태희'
+        // boss.rename('킹보스태희')
+        // undefined
+        // boss.name
+        // '킹보스태희'
+        // boss.sayName()
+        // 038.html:74 킹보스태희
+
+        function Baby(){
+            Boss.call(this);
+
+        }
+
+        Baby.prototype = Object.create(Boss.prototype);
+        Baby.prototype.canWork = function(){
+            console.log(`일해라! 잠죽자!!${this.name}`);
+        }
+
+        const baby = new Baby();
+
+        // baby.canWork()
+        // 038.html:95 일해라! 잠죽자!!보스태희
+        // undefined
+        // baby.name
+        // '보스태희'
+        // baby.rename('베이비태희')
+        // undefined
+        // baby.sayName()
+        // 038.html:74 베이비태희
+    
     </script>
 </body>
 </html>

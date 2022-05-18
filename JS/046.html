@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+
+    <script>
+        //데이터 접근 가능
+        //     class Robot {
+            
+        //     constructor(name) {
+        //         this.name = name;
+        //     }
+        
+        //     sayYourName() {
+        //         console.log(`삐리비리. 제 이름은 ${this.name}입니다. 주인님.`);
+        //     }
+        // }
+        
+        // const bot = new Robot('smith');
+        // bot.name // smith
+
+
+
+        class Robot {
+            #password
+
+            constructor(name, pw) {
+                this.name = name;
+                this.#password = pw;
+            }
+
+
+            sayYourName() {
+                console.log(`삐리비리. 제 이름은 ${this.name}입니다. 주인님.`);
+            }
+
+            getPassword() {
+                return this.#password
+            }
+
+            setPassword(pw) {
+                this.#password = pw;
+            }
+
+            // get password() {
+            //     return this.#password
+            // }
+
+            // set password(pw) {
+            //     this.#password = pw;
+            // }
+
+            // bot.password
+            // '1234'
+            // bot.password();
+            // VM476:1 Uncaught TypeError: bot.password is not a function
+            //     at <anonymous>:1:5
+        
+        // bot.password = 123456678
+        // 123456678
+        // bot
+        // Robot {name: '태희', #password: 123456678}
+        // bot.password
+        // 123456678
+
+        // 함수를 실행하지 않고 마치 객체에 접근하는 방법과 똑깉이 사용
+        // 유지보수에 별로
+        }
+
+        const bot = new Robot('태희','1234');
+
+
+        //게터세터방법
+        //bot.#password
+        //VM226:1 Uncaught SyntaxError: Private field '#password' must be declared in an enclosing class
+
+        //bot.setPassword(1234);
+        // undefined
+        // bot
+        // Robot {name: '영웅', #password: 1234}
+        // bot.getPassword()
+        // 1234
+
+
+        
+
+    
+    </script>
+
+</body>
+</html>

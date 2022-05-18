@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+        // 어제 배운 생성자 함수 형식
+        function Robot(name){
+            this.name = name;
+        }
+
+        Robot.prototype.sayYourName =  function(){
+            console.log(`삐리비리. 제 이름은 ${this.name}입니다. 주인님.`);
+        }
+        const bot1 = new Robot('재현');
+        console.log(bot1.name);
+
+
+        //class
+        //클래스는 함수가 아니다
+        // 클래스 안에서 함수 function 생략
+        class RobotClass{
+            //생성자함수
+            constructor(name){
+                //인스턴스 가르킴
+                this.name = name;
+            }
+            sayYourName(){
+                console.log(`삐리비리. 제 이름은 ${this.name}입니다. 주인님.`);
+            }
+        }
+
+        const botclass1 = new RobotClass('브랜든');
+        const botclass2 = new RobotClass('브랜든');
+        console.log(botclass1.sayYourName());
+        //botclass2.sayYourName() == botclass1.sayYourName() true;
+
+
+
+        class MyInfo{
+            constructor(name,age,number){
+                this.name = name;
+                this.age = age;
+                this.number =number;
+            }
+            sayMyNmae(){
+                console.log(`hello world...!My name is ${this.name}. I am ${this.age} years old, and my phone number is ${this.number}. Don't contact to me(╬▔皿▔)╯. It's raining outside, cold and i am tired.`);
+            }
+        }
+
+        const hello = new MyInfo('김태희','26','010-1234-5678');
+        console.log(hello.sayMyNmae());
+        
+    </script>
+</body>
+</html>

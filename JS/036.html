@@ -24,25 +24,25 @@
         
 
         //실습
-        // const drink = [
-        //     '아이스아메리카노',
-        //     '아이스카페라뗴',
-        //     '아이스녹차라뗴',
-        //     '아이스모카라떼',
-        //     '블랙버블티',
-        //     '녹차자바칩프라푸치노',
-        //     '아이스바닐라라떼'
-        // ]
+        const drink = [
+            '아이스아메리카노',
+            '아이스카페라뗴',
+            '아이스녹차라뗴',
+            '아이스모카라떼',
+            '블랙버블티',
+            '녹차자바칩프라푸치노',
+            '아이스바닐라라떼'
+        ]
 
-        // function CafeBot(menuNames){
-        //     this.menu = menuNames;
-        //     this.sayMenu = function(){
-        //        console.log(this.menu[Math.floor(Math.random() * this.menu.length)]); //0~6.99999
-        //     }
-        // }
-        // const cafebot1 = new CafeBot(drink);
-        // const cafebot2 = new CafeBot(drink);
-        //newbot1.sayYourName === newbot2.sayYourName --> false
+        function CafeBot(menuNames){
+            this.menu = menuNames;
+            this.sayMenu = function(){
+               console.log(this.menu[Math.floor(Math.random() * this.menu.length)]); //0~6.99999
+            }
+        }
+        const cafebot1 = new CafeBot(drink);
+        const cafebot2 = new CafeBot(drink);
+        newbot1.sayYourName === newbot2.sayYourName --> false
 
     </script>
 </body>

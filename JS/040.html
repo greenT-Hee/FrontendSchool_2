@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    
+    <script>
+        var outer = function(){
+            var a =1; // 외부에서는 접근할 수 없는 폐쇄된 공간 = 비공개 프로퍼티
+            // a랑 inner는 연결되어 있음
+            //inner 가 밖의 공간 전급 권한이 있음!!!
+            var inner = function(){
+                var b = 6;
+                var c = 7;
+                a = a + b + c;
+                console.log(a);
+            }
+            return inner;
+        }
+        var newInner = outer();
+        newInner(); // inner함수가 들어감 결국 
+        //ouer는 리턴을 만나 사라지고 (실행이됐으니까), 
+        //그 후 inner가 newInner를 만나 실행됨
+
+        console.log(a);//undefinded 외부접근
+    </script>
+
+</body>
+</html>

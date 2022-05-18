@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    
+    <script>
+        class Robot {
+            constructor(name) {
+                this.name = name;
+            }
+
+            sayYourName() {
+                console.log(`삐리비리. 제 이름은 ${this.name}입니다. 주인님.`);
+            }
+    }
+
+    //extend, super
+    //this들은 다 애기로봇 인스턴스
+    class BabyRobot extends Robot{
+        constructor(name){
+            super(name);
+            this.ownName = '아이크';
+        }
+
+        sayBabyName(){
+            this.sayYourName();
+            console.log('I am your father');
+        }
+    }
+    
+    const baby = new BabyRobot('태희');
+
+    // baby.sayYourName();
+    // 044.html:18 삐리비리. 제 이름은 태희입니다. 주인님.
+    // undefined
+    // baby.name
+    // '태희'
+    // baby.ownName
+    // '아이크'
+
+
+
+
+    //실습
+    class Sausage {
+        constructor(material1, material2){
+            this.material1 = material1;
+            this.material2 = material2;
+        }
+
+        taste(){
+            console.log(`${this.material1}와 ${this.material2}맛이 난다!! 배고프다!`);
+        }
+    }
+    const sausage = new Sausage('소고기','파');
+
+    class FireSausage extends Sausage{
+        constructor(material1, material2,material3){
+            super(material1,material2);
+            this.material2 = material3;
+        }
+
+        taste(){
+            console.log(`${this.material1}와 ${this.material2}와 ${this.material3}도 난다!! 배고프다!`);
+        }
+    }
+
+    const firesausage = new FireSausage('소고기','파','불맛');
+
+    </script>
+
+</body>
+</html>
