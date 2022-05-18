@@ -8,11 +8,34 @@
 </head>
 <body>
     <script>
-        const Me = {
-            name: '김태희',
-            age: 26,
-            studying: 
+        class Sausage{
+            constructor(material1, material2){
+                this.material1 = material1;
+                this.material2 = material2;
+            }
+
+            taste(){
+                console.log(`${this.material1}과 ${this.material2}맛이 난다`)
+            }
         }
+
+        
+        class FiredSausage extends Sausage{
+            constructor(material1,material2,material3){
+                super(material1,material2);
+                this.material3 = material3;
+            }
+
+            taste(){
+                console.log(`${this.material1}과 ${this.material2}과 ${this.material3} 맛이 난다`);
+            }
+        }
+
+        const sausage = new Sausage('파','돼지','불맛');
+        const firedSausage = new FiredSausage('파','돼지','불맛');
+
+        
+
     </script>
 </body>
 </html>
