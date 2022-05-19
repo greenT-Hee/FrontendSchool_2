@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=80e2961fb0cd86c854a1f21c708948a5"></script>
+    <div id="map" style="width:500px;height:400px;"></div>
+
+
+    <script>
+        var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+        var options = { //지도를 생성할 때 필요한 기본 옵션
+            center: new kakao.maps.LatLng(37.502403, 127.043525), 
+            //지도의 중심좌표. 위도경도
+            level: 3 //지도의 레벨(확대, 축소 정도)
+        };
+
+        var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+    </script>
+
+</body>
+</html>
+
+
+
+
+<!-- https://developers.kakao.com/ 접속
+회원가입
+내 애플리케이션 -> 어플리게이션 추가하기
+추가한 탭 클릭
+플랫폼 클릭
+web플랫폼 등록(파일경로 말고 IP주소까지만 등록)
+https://apis.map.kakao.com/web/guide/ 접속
+시작하기 부터 따라하기 
+앱키 복붙
+자스코드 복붙
+-->
