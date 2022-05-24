@@ -107,6 +107,28 @@ console.log(p)
 //VM204:1 Promise {<fulfilled>: '끝남!'}
 
 
+
+// 프라미스 체이닝이 아닌 경우, 동시 실행
+let p = new Promise(function(resolve, reject) {
+    setTimeout(() => resolve(10), 1000);
+});
+
+p.then(result => {
+    console.log(result);
+    return result ** 2;
+});
+
+p.then(result => {
+    console.log(result);
+    return result ** 2;
+});
+
+p.then(result => {
+    console.log(result);
+    return result ** 2;
+});
+
+
 // 실행하지 마세요. pending에 빠집니다.
 //let p = new Promise(function(resolve, reject) {
 //  console.log('hello world')
@@ -202,7 +224,6 @@ asyncProcess();
 
 ///////////
 // 비동기처리 //
-
 setTimeout(()=> {
     console.log('5초 끝!')
 }, 5000);

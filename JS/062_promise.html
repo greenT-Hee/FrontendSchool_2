@@ -1,0 +1,6 @@
+javascript fetch('https://raw.githubusercontent.com/paullabkorea/coronaVaccinationStatus/main/data/data.json')
+    .then(function(response) {
+        console.log(1);
+        return response.json();
+    })
+    .then(json => console.log(json))
