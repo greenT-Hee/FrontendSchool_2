@@ -140,3 +140,4 @@ console
     username = undefined;
     result5 = username || '유저 이름이 없습니다';
     ```
+
