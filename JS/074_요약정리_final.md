@@ -177,10 +177,15 @@ console
     * 호출 : 변수명
     * 메서드 : 
         * 10.toString()는 안됩니다. 이유는 무엇일까요? 소수점 때문에 그렇습니다.(JavaScript의 parsing때문이고, 아는 분이 많지는 않습니다.)
-        * (10).toString()와 변수명.toString()은 가능합니다.
-        * num.toFixed()
+        * (10).toString()와 변수명.toString()은 가능합니다. 
+    ```js
+    let x =10;
+    x.toString();
+    //'10'
+    ```
+    * num.toFixed() - 소수점을 고정, toFixed(2) -> 소수점 2개 고정
     * Number()
-    * parseInt() - 권고, parseFloat()
+    * parseInt() - 권고, parseFloat() -> 부동소수점 실수로 반환
     ```js
     parseInt('1hello world') // 1
     Number('hello world') // NaN
@@ -220,7 +225,7 @@ console
         ```js
         'hello'.repeat(100)
         '0'.repeat(100)
-        '5'.repeat(100).split('').map(Number)
+        '5'.repeat(100).split('').map(Number) // 넘버로 바뀜
         ```
 
 - Boolean(논리값)
@@ -485,8 +490,10 @@ for (let i = 0; i < 10; i++) {
 
 
 # 함수와 클래스
+ 
+ 함수 이용 이유: 아키텍처 파악, 유지보수, 재사용
 ## 함수
-- 함수 표현식과 함수 선언식
+- 함수를 선언하면 호이스팅이 X, 함수 실행 코드를 ```function```아래에다가 적기
     ```js
     let 함수표현식 = function(){} // 호이스팅 X
     function 함수선언식(){} // 호이스팅 O
@@ -535,6 +542,7 @@ for (let i = 0; i < 10; i++) {
     add(undefined, 300);
     // 400
 
+    //{}로 감싸서 해결
     function add({ a = 100, b = 200 }) {
         console.log(a+b);
     }
@@ -614,11 +622,17 @@ for (let i = 0; i < 10; i++) {
 - 익명 함수
     ```js
     console.dir(function (x, y) {return x + y;})
+    //ƒ anonymous(x, y)
+    //arguments: null
+    //caller: null
+    //length: 2
+    //name: ""
     ```
 
 ## 클래스
 * 클래스 - 붕어빵 찍는 틀, 공장
 * 인스턴스 - 붕어빵, 제품
+* 붕어빵 틀을 먹지 말자! 
 ```js
 class Human {
     constructor() {}
