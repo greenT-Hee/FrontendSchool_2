@@ -14,32 +14,37 @@
         const $root = $('#root')
         $root.append(`<main class='product'></main>`)
         const $main = $('main')
+        // $('main').addClass('hello')
         $main.append(`
             <h1 class="ir">상품목록 페이지</h1>
             <ul class="product-list"></ul>
         `)
         const $product_list = $('.product-list')
 
-        var product;
+        let product;
         $.ajax({
             url: 'http://test.api.weniv.co.kr/mall',
-            async: true,
+            async: false, // true 로 바꾸면 아래 코드를 실행하지 않음
             dataType: 'JSON',
             success: function (result) {
                 // $("#data").text(result);
+                console.log(1)
                 product = result;
                 // console.log(product)
-                product.forEach(data => {
-                    console.log(data)
-                    $product_list.append(`
+            }
+        });
+        console.log(2)
+        console.log(product)
+
+        product.forEach(data => {
+            // console.log(data['productName'])
+            $product_list.append(`
                     <li>
                         <img src='http://test.api.weniv.co.kr/${data['thumbnailImg']}'>
                         <p>${data['productName']}</p>
                         <p>${data['price']}</p>
                     </li>
-                    `)
-                });
-            }
+                `)
         });
 
     </script>
