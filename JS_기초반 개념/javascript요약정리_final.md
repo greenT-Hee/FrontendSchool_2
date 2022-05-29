@@ -90,6 +90,18 @@ let a = 10,
     * 예약어를 사용할 수 없다.(예약어가 사용 불가능한 것은 아닙니다.)
     * $, _를 제외한 특수문자를 사용하지 않는다.
     * 대소문자를 구분한다.
+```js
+//회사 컨벤션
+//$은 DOM 으로 사용 
+$변수 = documentgetElement(’one’)
+$변수.textContent = ‘hello’
+
+// _는 의미 없는 변수 
+for(let _ = 0;  _ < 10;  _++>){
+    console,log('hello')
+}
+```
+
 * var, let, const
     ```js
     if (true) {
@@ -182,14 +194,14 @@ let a = 10,
         * str.length
         * str.indexOf()
         * str.lastIndexOf()
-        * str.includes()
+        * str.includes() 
         * str.split()
-        * str.substring()
-        * str.substr()
+        * str.substring() // (시작 인덱스, 끝 인덱스) 해당하는 문자만 뽑아줌
+        * str.substr() // substring()으로 사용, 지금은 사용하지 않음
         * str.toLowerCase()
         * str.toUpperCase()
         * str.trim()
-        * str.replace()
+        * str.replace() // (바꿀 문자, 바뀔 문자)
         * str.concat()
 
 - Boolean(논리값)
@@ -272,11 +284,11 @@ let a = 10,
         age:30,
         local:'jeju'
     }
-    let hojun = new Map(Object.entries(human))
+    let hojun = new Map(Object.entries(human)) //Object.entries만 가능
     ```
 
 - Set : object
-    * 메서드 : add, has, delete, has, size
+    * 메서드 : add, has, delete,  size
     * 중복을 허락하지 않는다
     * 합집합, 교집합, 차집합 등에 메서드가 있진 않지만, 이러한 합집합, 교집합, 차집합을 구현하기 위해 Set을 사용하는 경우기 많습니다.
     ```js

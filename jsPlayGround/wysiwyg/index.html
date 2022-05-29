@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="reset.css"> -->
+    <!-- Cross-Origin Resource Sharing 다른 출처에 접근 가능하게 해주는 리소스 (명시적으로 보여줌), 면접 준비! -->
+    <script src="https://kit.fontawesome.com/ef4b375895.js" crossorigin="anonymous"></script>
+    <title>wysiwyg</title>
+</head>
+<body>
+    <article id="app">
+        <ul class="options">
+            <li>
+                <button type="button" data-command="h1">H1</button>
+            </li>
+            <li>
+                <button type="button" data-command="h2">H2</button>
+            </li>
+            <li>
+                <button type="button" data-command="h3">H3</button>
+            </li>
+            <li>
+                <button type="button" data-command="p">P</button>
+            </li>
+            <li>
+                <button type="button" data-command="bold">
+                    <i class="fa-solid fa-bold"></i>
+                </button>
+            </li>
+            <li>
+                <button type="button" data-command="italic">
+                    <i class="fa-solid fa-italic"></i>
+                </button>
+            </li>
+            <li>
+                <button type="button" data-command="underLine">
+                    <i class="fa-solid fa-underline"></i>
+                </button>
+            </li>
+            <li>
+                <button type="button" data-command="strikeThrough"><i class="fa-solid fa-strikethrough"></i></button>
+            </li>
+            <li>
+                <button type="button" data-command="justifyLeft">
+                    <i class="fa-solid fa-align-left"></i>
+                </button>
+            </li>
+            <li>
+                <button type="button" data-command="justifyCenter"><i class="fa-solid fa-align-center"></i></button>
+            </li>
+            <li>
+                <button type="button" data-command="justifyRight">
+                    <i class="fa-solid fa-align-right"></i>
+                </button>
+            </li>
+            <li>
+                <button type="button" data-command="justifyFull">
+                    <i class="fa-solid fa-align-justify"></i>
+                </button>
+            </li>
+        </ul>
+        <div class="editor" contenteditable="true">
+            <h1>나만의 wysiwyg</h1>
+            <p>Hello World (✿◡‿◡)</p>
+        </div>
+    </article>
+
+
+    <script>
+        // document.querySelectorAll('.options button').forEach(item => item.addEventListener('click', function () {
+        //             const command = item.dataset.command;
+        //             if (command === 'h1' || command === 'h2' || command === 'h3' || command === 'p') {
+        //                 document.execCommand('formatBlock', false, command);
+        //             } else {
+        //                 document.execCommand(command);
+        //             }
+        //         }));
+
+        
+
+    </script>
+</body>
+</html>
+
+
+
+
+<!-- 
+1. 기본 UI를 제작합니다.
+2. 요소가 편집 가능해야합니다.
+3. 버튼을 눌렀을 때 뭔가 기능이 동작해야합니다.
+    1) 드래그를 통해 우리가 선택한 노드가 무엇인지 파악할 수 있어야합니다.
+    2) 기능1 : 선택한 노드의 한 줄이 통으로 스타일이 바뀌는 기능
+    3) 기능2 : 선택한 노드만 바뀌는 기능 -->
