@@ -36,8 +36,8 @@
     <script>
         const btnStart =  document.querySelector('.btn-start');
         btnStart.addEventListener('click', function(){
-            btnStart.textContent = 'PASUSE';
-            btnStart.classList.add('btn-pause')
+            btnStart.classList.toggle('btn-pause');
+            btnStart.innerHTML = `<i class="fa-solid fa-pause"></i> PASUSE`;
         })
     </script>
 </body>

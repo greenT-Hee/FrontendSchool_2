@@ -56,9 +56,31 @@ body{
 
 .list-title li {
     display: inline-block;
-    padding: 0 32px;
+    padding: 0 28px;
     color: rgb(189, 189, 189);
     font-size: 11px;
+    font-weight: bold;
+}
+
+.list-time::after{
+    display: block;
+    content: ':';
+    position: absolute;
+    left: 133px;
+    top: 265px;
+    color: #7f9ad4;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.list-time::before{
+    display: block;
+    content: ':';
+    position: absolute;
+    right: 133px;
+    top: 265px;
+    color: #7f9ad4;
+    font-size: 40px;
     font-weight: bold;
 }
 
@@ -70,10 +92,11 @@ body{
 .list-time li{
     position: relative;
     display: inline-block;
-    width: 70px;
+    width: 60px;
     height: 60px;
     border: 10px;
     margin: 0 8px;
+    border: 1px solid #173569;
     background: linear-gradient(140deg,#5a6e9a, #173569);
 }
 
@@ -83,7 +106,7 @@ body{
     position: absolute;
     left: 0;
     top: 30px;
-    width: 70px;
+    width: 60px;
     height: 0.5px;
     background-color: #173569;
 }
