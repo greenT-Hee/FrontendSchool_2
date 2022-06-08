@@ -96,6 +96,10 @@ body{
     height: 60px;
     border: 10px;
     margin: 0 8px;
+    font-size: 40px;
+    color: white;
+    vertical-align: middle;
+    line-height: 1.5;
     border: 1px solid #173569;
     background: linear-gradient(140deg,#5a6e9a, #173569);
 }
