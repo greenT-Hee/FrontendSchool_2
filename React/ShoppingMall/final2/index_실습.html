@@ -182,7 +182,7 @@
             }
         ]
 
-        console.log(data)
+        // console.log(data)
 
         const Main = () => <h1 class="ir">상품페이지 목록</h1>
 
@@ -193,32 +193,28 @@
                     <div class="product-img">
                         <img src={url} />
                     </div>
-                    <strong class="product-name sl-ellipsis">${goods.productName}</strong>
+                    <strong class="product-name sl-ellipsis">{goods.productName}</strong>
                     <button class="like-btn"></button>
                     <div class="product-price">
-                        <strong class="price m-price">${goods.price}<span>원</span></strong>
+                        <strong class="price m-price">{goods.price}<span>원</span></strong>
                     </div>
                 </li>
             )
         }
 
-        const Cart = () => <a href="#" class="link-btn cart-link"></a>;
-    
+        const Cart = () => <a class='link-btn cart-link' href='#'></a>
 
-        const Product = ({ item })=> {
+        const Product = ({ item }) => {
             return (
                 <main class="product">
                     <ul class="product-list">
-                        {/*[
-                            <Card goods={item[0]} />,
-                            <Card goods={item[1]} />,
-                            <Card goods={item[2]} />,
-                            <Card goods={item[3]} />,
-                            <Card goods={item[4]} />,
-                            <Card goods={item[5]} />,
-                            <Card goods={item[6]} />,
-                        ]*/}
-                        {item.map(item => (<Card goods={item} keys = {item.id} />))}
+                        <Card goods={item[0]} />
+                        <Card goods={item[1]} />
+                        <Card goods={item[2]} />
+                        <Card goods={item[3]} />
+                        <Card goods={item[4]} />
+                        <Card goods={item[5]} />
+                        <Card goods={item[6]} />
                     </ul>
                     <Cart />
                 </main>
