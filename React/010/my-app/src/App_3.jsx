@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 function Resume(props) {
   const [like, setLike] = useState(0);
+// 여기에 like가 있기 때문에 herat도 같이 아래에서 재렌더링이 된 것 
 let heart = like % 2 === 1 ? "💚" : "";
 
 

@@ -6,6 +6,7 @@ function Resume(props) {
       console.log(like);
   }
 
+  // {like}를 변해야 하는지 아닌지 잘 확인 불가 => useStake
   return(
       <div>
           <button onClick={handleClickLike}>like : {like}</button>

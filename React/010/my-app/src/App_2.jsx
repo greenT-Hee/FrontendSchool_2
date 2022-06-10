@@ -10,7 +10,7 @@ function Resume(props) {
 
   return(
       <div>
-          <button onClick={handleClickLike}>like : {like}</button>
+          <button onClick={handleClickLike}> like : {like}</button>
       </div>
   )
 }

@@ -6,10 +6,17 @@ const Login = () => {
 
   const handleLoginSubmit = (e) => {
     e.preventDefault();
+    // if(id==""){
+    //   alert('아이디를 입력해')
+    // }
+    // if(pw==""){
+    //   alert('비밀번호를 입력해')
+    // }
     console.log("submit");
     alert(`id : ${id}, pw : ${pw}`);
   };
 
+  // e.target.value => input창의 value
   const handleLoginInput = (e) => {
     console.log("id", e.target.value);
     setId(e.target.value);
