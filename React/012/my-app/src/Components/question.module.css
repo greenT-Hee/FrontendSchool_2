@@ -9,11 +9,11 @@
   } */
 
 .box {
-    background: pink;
+    background: rgb(129, 190, 224);
   }
   .text {
     width: 200px;
     margin: 0 auto;
     text-align: center;
-    color: lemonchiffon;
+    color: rgb(40, 78, 134);
   }

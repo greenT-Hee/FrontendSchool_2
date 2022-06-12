@@ -1,8 +1,12 @@
+// import React, { Fragment } from 'react';
+import Homepage  from './page/Homepage';
+import "./reset.css";
+
 function App() {
   return (
-    <div className="App">
-      <h1>test2</h1>
-    </div>
+    <>
+      <Homepage/>
+    </>
   );
 }
 

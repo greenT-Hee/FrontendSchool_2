@@ -17,8 +17,8 @@ const App = () => {
                 Review
             </li>
             </ul>
+            <Question />
         </nav>
-        <Question />
     </>
     );
 };

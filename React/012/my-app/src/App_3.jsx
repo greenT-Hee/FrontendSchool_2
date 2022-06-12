@@ -5,7 +5,7 @@ const ContentSection = styled.div`
 `;
 
 function colorCheck(value){
-    if(value === 'hello'){
+    if(value === 'licat'){
         return 'red'
     }
     return 'black'
@@ -14,6 +14,7 @@ function colorCheck(value){
 // color: ${colorCheck(props)}
 
 const ContentTitle = styled.h2`
+//color: ${({name})=> (name === 'licat' ? 'red' : 'black')};
     color: ${(props)=> (props.name === 'licat' ? 'red' : 'black')};
     width: 200px;
     margin: 0 auto;
@@ -23,7 +24,7 @@ const ContentTitle = styled.h2`
 function App() {
     return (
         <ContentSection>
-            <ContentTitle name = {'licat'}>hello world</ContentTitle>
+            <ContentTitle name = {'licat'}>hello liCat! 😺</ContentTitle>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam perferendis laudantium facere hic praesentium odio tempora debitis sint reprehenderit, facilis optio reiciendis sed explicabo voluptatem consequuntur quis fugiat animi. Corporis!</p>
         </ContentSection>
     );

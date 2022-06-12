@@ -28,6 +28,7 @@ function Hello(){
 
 function App() {
     return (
+        //<GlobalStyle /> 위치는 크게 상관 없음 (div 안 어디서나 가능)
         <div className="App">
             <GlobalStyle/>
             <h1>test2</h1>
