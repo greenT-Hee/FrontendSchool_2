@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const ContentDiv = styled.div`
-  margin: 40px;
+  width: 1000px;
+  margin: 50px auto;
 `;
 
 const ContentH2 = styled.h2`

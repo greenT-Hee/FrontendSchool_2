@@ -59,7 +59,7 @@ export default function Header(){
                 <P>사용자 인터페이스를 만들기 위한 JavaScript 라이브러리</P>
                 <div>
                     <BtnStart>시작하기</BtnStart>
-                    <BtnRead>자습서 읽어보기 > </BtnRead>
+                    <BtnRead>자습서 읽어보기 </BtnRead>
                 </div>
             </Div>
         </header>

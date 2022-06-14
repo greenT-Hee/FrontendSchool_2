@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 
 const NavCont = styled.div`
@@ -33,6 +34,7 @@ const NavUl = styled.ul`
   font-size: 18px;
   width: 480px;
   margin-left: 5%;
+  text-decoration: none;
 `
 const Li = styled.li`
   display: inline-block;
@@ -73,22 +75,23 @@ function Input(){
   return <SearchIpt type="text" placeholder="검색"/>
 }
 
-function NavMenu ({menu}){
-  return(
-    <Li>{menu}</Li>
-  )
-}
-
-
 export default function Nav() {
   return (
     <NavCont>
       <BtnLogo/>
       <NavUl>
-        <NavMenu menu = {"문서"}/>
-        <NavMenu menu = {"자습서"}/>
-        <NavMenu menu = {"블로그"}/>
-        <NavMenu menu = {"커뮤니티"}/>
+        <Li>
+          <Link to = "/docs" target={"blank"} style={{color:"white", textDecoration:"none" }}>문서</Link>
+        </Li>
+        <Li>
+            <Link to = "/study" target={"blank"} style={{color:"white", textDecoration:"none" }}>자습서</Link>
+        </Li>
+        <Li>
+          <Link to = "/blog" target={"blank"} style={{color:"white", textDecoration:"none" }}>블로그</Link>
+        </Li>
+        <Li>
+          <Link to = "/community" target={"blank"} style={{color:"white", textDecoration:"none" }}>커뮤니티</Link>
+        </Li>
       </NavUl>
       <SearchForm action="">
         <Input />
@@ -102,22 +105,3 @@ export default function Nav() {
   )
 }
 
-
-// <BrowserRouter>
-// <Link to="">
-//   홈
-// </Link>
-// <Link to="/one">
-//   현재시간
-// </Link>
-// <Link to="/two">
-//   안녕
-// </Link>
-// <Link to="/three">
-//   소개
-// </Link>
-// <Route path="/" exact component={Homepage} />
-// <Route path="/one" exact component={One} />
-// <Route path="/two" exact component={Two} />
-// <Route path="/Three" exact component={Three} />
-// </BrowserRouter>
