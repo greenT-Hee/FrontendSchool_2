@@ -10,27 +10,27 @@ import "./reset.css";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Route
-            path = "/"
+            path = "/CloneReact"
             exact
             component={Homepage}
           >
           </Route>
           <Route
-            path = "/docs"
+            path = "/CloneReact/docs"
             exact
             component={Docs}
           >
           </Route>
           <Route
-            path = "/blog"
+            path = "/CloneReact/blog"
             exact
             component={Blog}
           >
           </Route>
           <Route
-            path = "/study"
+            path = "/CloneReact/study"
             exact
             component={Study}
           >

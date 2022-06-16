@@ -1,7 +1,6 @@
 import React, { useEffect, useLayoutEffect, useState } from "react";
 
 function App() {
-
   const [num, setNum] = useState(0)
 
   const handleonClick = () => {
@@ -9,53 +8,62 @@ function App() {
   }
 
   useLayoutEffect(()=>{
-    console.log(1)
+    console.log('useLayoutEffect 1')
     return () => {
-      console.log('return_1')
+      console.log('useLayoutEffect return_1')
     }
-  }, []) //처음 mount됐을 때만 한 번 실행
+  }, [])
 
   useLayoutEffect(()=>{
-    console.log(2)
+    console.log('useLayoutEffect 2')
     return () => {
-      console.log('return_2')
+      console.log('useLayoutEffect return_2')
     }
-  }) //unmount안되고 udate만 실행이 된다
+  })
 
   useLayoutEffect(()=>{
-    console.log(3)
+    console.log('useLayoutEffect 3')
     return () => {
-      console.log('return_3')
+      console.log('useLayoutEffect return_3')
     }
-  }, [num]) //unmount안되고 udate만 실행이 된다
+  }, [num])
 
   useEffect(()=>{
     console.log('useEffect 1')
     return () => {
-      console.log('useEffect _return_1')
+      console.log('useEffect return_1')
     }
   }, [])
 
   useEffect(()=>{
     console.log('useEffect 2')
     return () => {
-      console.log('useEffect_return_2')
+      console.log('useEffect return_2')
     }
   })
 
   useEffect(()=>{
     console.log('useEffect 3')
     return () => {
-      console.log('useEffect_return_3')
+      console.log('useEffect return_3')
     }
   }, [num])
 
-
   return (
-    <div className="App">
-      <button onClick={handleonClick}>{num}</button>
-    </div>
+    <button onClick={handleonClick}>{num}</button>
   );
 }
 
-export default App
+const Wrap = ()=>{
+  const [isVisible,setIsVisible] = useState(true)
+  const handleClick = ()=> setIsVisible(!isVisible)
+  return (
+    <>
+      <button onClick={handleClick}>{isVisible? "언마운트시키기" : "마운트시키기"}</button>
+      <br></br>
+      {isVisible&& <App />}
+    </>
+  )
+}
+
+export default Wrap;

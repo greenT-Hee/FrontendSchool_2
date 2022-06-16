@@ -81,16 +81,16 @@ export default function Nav() {
       <BtnLogo/>
       <NavUl>
         <Li>
-          <Link to = "/docs" target={"blank"} style={{color:"white", textDecoration:"none" }}>문서</Link>
+          <Link to = "/CloneReact/docs" target={"blank"} style={{color:"white", textDecoration:"none" }}>문서</Link>
         </Li>
         <Li>
-            <Link to = "/study" target={"blank"} style={{color:"white", textDecoration:"none" }}>자습서</Link>
+            <Link to = "/CloneReact/study" target={"blank"} style={{color:"white", textDecoration:"none" }}>자습서</Link>
         </Li>
         <Li>
-          <Link to = "/blog" target={"blank"} style={{color:"white", textDecoration:"none" }}>블로그</Link>
+          <Link to = "/CloneReact/blog" target={"blank"} style={{color:"white", textDecoration:"none" }}>블로그</Link>
         </Li>
         <Li>
-          <Link to = "/community" target={"blank"} style={{color:"white", textDecoration:"none" }}>커뮤니티</Link>
+          <Link to = "/CloneReact/community" target={"blank"} style={{color:"white", textDecoration:"none" }}>커뮤니티</Link>
         </Li>
       </NavUl>
       <SearchForm action="">

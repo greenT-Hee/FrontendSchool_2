@@ -8,7 +8,7 @@ export default function HomePage() {
 
   useEffect(()=>{
     console.log('로딩중!')
-  },[])
+  },[]) // 딱 한 번 실행되는 [] 초기화 ... ! 
   
   useEffect(()=>{
     if (loadData === []) {
@@ -27,7 +27,7 @@ export default function HomePage() {
   return (
     <main className="product">
         <ul className="product-list">
-        {loadData !==[] ? loadData.map(item => 
+        {loadData !==undefined ? loadData.map(item => 
             <ProductCard
                 key={item.id} 
                 productName={item.productName}
