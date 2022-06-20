@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.1/redux.js"></script>
+    
+</head>
+
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+        body{
+            padding: 10%;
+            background-color: rgb(31, 31, 31);
+        }
+        .container {
+            border: 5px solid black;
+            padding: 5%;
+        }
+        .controlTower{
+            padding:20px;
+            margin: 0 auto;
+        }
+        .input{
+            width: 200px;
+            padding: 6px;
+            background-color: rgb(59, 59, 59);
+            color: white;
+        }
+        button{
+            background-color: rgb(255, 255, 255);
+            margin: 10px;
+            padding: 5px 10px;
+        }
+    </style>
+    <div>
+        <div class="controlTower">
+            <input 
+                type="text" 
+                placeholder="글씨를 입력하세요" 
+                class="input"
+            >
+            <button 
+                id="changeFont"
+                onclick= "store.dispatch({type:'CHANGE_FONTFAMILY', fontFamily: 'Lato'})"
+            >
+                change_font
+            </button>
+            <button 
+                onclick= "store.dispatch({type:'CHANGE_COLOR', color:'lightblue'})"
+                style="background-color: lightblue"
+            >
+                lightBlue
+            </button>
+            <button 
+                onclick= "store.dispatch({type:'CHANGE_COLOR', color:'lightcoral'})"
+                style="background-color: lightcoral"
+                >
+                lightcoral
+            </button>
+            <button 
+                onclick= "store.dispatch({type:'CHANGE_COLOR', color:'rgb(96, 202, 144)'})"
+                style="background-color: rgb(96, 202, 144)"
+                >
+                lightBlue
+            </button>
+        </div>
+    </div>
+    <div id="font1"></div>
+    <div id="font2"></div>
+    <div id="font3"></div>
+    <div id="font4"></div>
+    <div id="font5"></div>
+    <div id="font6"></div>
+    <script>
+        
+        // state는 현재 상태, action은 주문 받은 것! 
+        function reducer(state, action) {
+            console.log(state, action);
+            if (state === undefined) {
+                return { color: 'white'}
+            }
+
+            let newState;
+            if (action.type === 'CHANGE_COLOR' || action.type === 'CHANGE_FONTFAMILY') {
+                // Object.assign({}, 빈객체에 복제할 값1, 빈객체에 복제할 값2...);
+                newState = { ...state, color: action.color, fontFamily: action.fontFamily};
+            }
+            console.log(state)
+            return newState;
+        }
+        
+        let store = Redux.createStore(
+            reducer,
+            window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() 
+        );
+        function font1() {
+            var state = store.getState();
+            document.querySelector('#font1').innerHTML = `
+                <div class="container" id="component_font1" style="background-color:${state.color} font-family:${state.fontFamily}">
+                    <h1></h1>
+                </div>
+            `;
+        }
+        store.subscribe(font1);
+        font1();
+
+        function font2() {
+            var state = store.getState();
+            document.querySelector('#font2').innerHTML = `
+                <div class="container" id="component_font2" style="background-color:${state.color}">
+                    <h1></h1>
+                </div>
+            `;
+        }
+        // 값이 바뀔 때마다 red 함수를 호출
+        store.subscribe(font2);
+        font2();
+
+        function font2() {
+            var state = store.getState();
+            document.querySelector('#font2').innerHTML = `
+                <div class="container" id="component_font2" style="background-color:${state.color}">
+                    <h1></h1>
+                </div>
+            `;
+        }
+        // 값이 바뀔 때마다 red 함수를 호출
+        store.subscribe(font2);
+        font2();
+
+        function font3() {
+            var state = store.getState();
+            document.querySelector('#font3').innerHTML = `
+                <div class="container" id="component_font3" style="background-color:${state.color}>
+                    <h1></h1>
+                </div>
+            `;
+        }
+        // 값이 바뀔 때마다 red 함수를 호출
+        store.subscribe(font3);
+        font3();
+
+        function font4() {
+            var state = store.getState();
+            document.querySelector('#font4').innerHTML = `
+                <div class="container" id="component_font4" style="background-color:${state.color}">
+                    <h1></h1>
+                </div>
+            `;
+        }
+        // 값이 바뀔 때마다 red 함수를 호출
+        store.subscribe(font4);
+        font4();
+
+        function font5() {
+            var state = store.getState();
+            document.querySelector('#font5').innerHTML = `
+                <div class="container" id="component_font5" style="background-color:${state.color}">
+                    <h1></h1>
+                </div>
+            `;
+        }
+        // 값이 바뀔 때마다 red 함수를 호출
+        store.subscribe(font5);
+        font5();
+
+        function font6() {
+            var state = store.getState();
+            document.querySelector('#font6').innerHTML = `
+                <div class="container" id="component_font5" style="background-color:${state.color}">
+                    <h1></h1>
+                </div>
+            `;
+        }
+        // 값이 바뀔 때마다 red 함수를 호출
+        store.subscribe(font6);
+        font6();
+
+    </script>
+    <script>
+        const input = document.querySelector('input');
+        const btn = document.querySelector('#changeFont') 
+        const h1 = document.querySelectorAll('h1'); 
+        btn.addEventListener('click', (e)=> {
+            h1.forEach(item => {
+                item.innerText = input.value;
+            });
+        })
+    </script>
+</body>
+
+</html>
