@@ -5,17 +5,19 @@ import App from './App';
 import { createStore } from 'redux';
 import rootReducer from './modules';
 import { Provider } from 'react-redux';
-import { composeWithDevTools } from 'redux-devtools-extension'; // 리덕스 개발자 도구
-import goodsReducer from '.modules/goodsCounter'
-import stockReducer from '.modules/stockCounter'
+// import { composeWithDevTools } from 'redux-devtools-extension'; // 리덕스 개발자 도구
+import goodsReducer from './modules/goodsCounter'
+import stockReducer from './modules/stockCounter'
+import { configureStore } from '@reduxjs/toolkit';
 
 // const store = createStore(rootReducer, composeWithDevTools());
-// console.log(store.getState());
-
 const store = configureStore({
-    goodsCounter,
-    stockReducer
+    reducer:{
+        goodsReducer,
+        stockReducer
+    },
 })
+console.log(store.getState());
 
 const container = document.getElementById('root');
 const root = createRoot(container);

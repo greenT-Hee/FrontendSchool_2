@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux'
-import { addNumber, substractNumber } from '../modules/goodsCounter'
+import { increment, decrement } from '../modules/goodsCounter'
 
 function GoodsCounter(){
 
@@ -13,8 +13,8 @@ function GoodsCounter(){
     // useDispatch : store의 dispatch를 함수 내부에서 사용할 수 있는 Hook
     const dispatch = useDispatch()
 
-    const onAddNumber = () => dispatch(addNumber())
-    const onSubstractNumber = () => dispatch(substractNumber())
+    const onAddNumber = () => dispatch(increment())
+    const onSubstractNumber = () => dispatch(decrement())
 
     return (
         <div>

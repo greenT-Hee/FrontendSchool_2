@@ -39,8 +39,7 @@ import { createSlice } from '@reduxjs/toolkit'
 
 // export default goodsReducer
 
-e
-
+// 초기값
 const initialState = {
     stock : 10, // 재고
     goods : 1    // user의 파우치 구매 개수
@@ -50,11 +49,11 @@ export const counterSlice = createSlice({
     name : 'counter',
     initialState,
     reducers: {
-        increment: (state) => {
+        increment : (state) => {
             state.stock -= 1
             state.goods += 1
         },
-        decrement: (state) => {
+        decrement : (state) => {
             state.stock += 1
             state.goods -= 1
         }

@@ -6,6 +6,7 @@ import { createStore } from 'redux';
 import rootReducer from './modules';
 import { Provider } from 'react-redux';
 import { composeWithDevTools } from 'redux-devtools-extension'; 
+//시간영행 위해서
 // 리덕스 개발자 도구
 
 const store = createStore(rootReducer, composeWithDevTools());
