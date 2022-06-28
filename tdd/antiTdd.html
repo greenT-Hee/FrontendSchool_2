@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        article {
+            display: inline-block;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .viewer {
+            display: block;
+            font-size: 24px;
+            color: lightcoral;
+            margin: 50px 0 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <article>
+        <strong class="viewer"></strong>
+        <label for="inpTxt">입력어</label>
+        <input id="inpTxt" type="text" class="inp-txt">
+        <button type="button" class="btn-push">적용</button>
+    </article>
+
+    <!-- <script>
+        // 1.전역공간에 선언한 경우, closure 쓰고 널값 안 준 경우는 계속 참조 카운팅에 사라지지 않음 
+        let txt = "Hello Lions!";
+        const viewer = document.querySelector(".viewer");
+        viewer.textContent = txt;
+
+        function push(){
+            // 2. 계속 불러와지는 .inpt-txt
+            // const inpTxt = document.querySelector(".inp-txt");
+            viewer.textContent = inpTxt.value;
+        }
+
+        3. 인라인태그에 들어간 onclick
+    </script> -->
+
+    
+    <script>
+        // 내가 고친 코드 
+        const inpTxt = document.querySelector(".inp-txt");
+        const button = document.querySelector(".btn-push");
+        const viewer = document.querySelector(".viewer");
+
+        // let txt = "Hello Lions!";
+        viewer.textContent = "Hello Lions!";
+
+        button.addEventListener("click",(event) => {
+            viewer.textContent = inpTxt.value;
+        })
+    </script>
+</body>
+
+</html>
