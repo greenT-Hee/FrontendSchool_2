@@ -39,7 +39,19 @@
         </span>
     </div>
 
+    <form action="">
+        <label for="test">입력하세요</label>
+        <input type="text" id="test" required>
+        <button type="submit">제출하기</button>
+    </form>
+
     <script>
+        const myInp = document.querySelector('#test')
+
+        myInp.addEventListener("invalid", (event) => {
+            event.preventDefault();
+        })
+
         const tooltip = document.querySelector('.tooltip');
         const toolCont = document.querySelector('.tooltip-content');
 
@@ -54,6 +66,7 @@
             toolCont.removeAttribute('style');
         })
 
+        //옛날코드
         // tooltip.onkeydown = function(event) {
         //     if(event.keyCode === 27) {
         //         toolCont.style.display = 'none';
