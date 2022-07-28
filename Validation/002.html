@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      span {
+        display: none;
+      }
+      input:required {
+        border: 3px solid blue;
+      }
+      input:required + span {
+        display: block;
+      }
+      input:invalid {
+        border: 3px solid red;
+      }
+      input:valid {
+        border: 5px solid lightskyblue;
+      }
+      input:required:invalid {
+        background-color: lightgrey;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <label for="text" id="">사과 입력해</label>
+      <input type="text" id="txt" pattern="사과" required />
+      <button type="submit">전송</button>
+
+      <br />
+      <br />
+      <label for="text" id="">사과 혹은 수박</label>
+      <input type="text" id="txt" pattern="사과|수박" required />
+      <button type="submit">전송</button>
+      <br />
+
+      <!-- 3개 아무거나 -->
+      <label for="text" id="">아무 문자 세 개 입력</label>
+      <input type="text" id="txt" pattern="..." />
+      <button type="submit">전송</button>
+
+      <br />
+      <label for="text" id="">[] 안에 하나만씩만 가능하다.</label>
+      <input type="text" id="txt" pattern="[사과배][123]" />
+
+      <button type="submit">전송</button>
+      <br />
+      <label for="text" id="">아무 한글이나 한글자 입력 범위</label>
+      <input type="text" id="txt" pattern="[ㄱ-ㅎ가-힣]" />
+      <button type="submit">전송</button>
+
+      <br />
+      <label for="text" id="">아무 한글이나 한글자 입력 범위</label>
+      <input type="text" id="txt" pattern="[ㄱ-ㅎ가-힣]*" />
+      <button type="submit">전송</button>
+
+      <br />
+      <label for="text" id="">다 된다</label>
+      <input type="text" id="txt" pattern="[ㄱ-ㅎ가-힣0-9a-zA-Z]*" />
+      <button type="submit">전송</button>
+
+      <br />
+      <label for="text" id="">특수기호 제외하고 아무 그자 입력</label>
+      <input type="text" id="txt" pattern="[ㄱ-ㅎ가-힣0-9a-zA-Z]*" />
+      <button type="submit">전송</button>
+
+      <br />
+      <label for="text" id=""
+        >1~4글자까지 특수기호 제외하고 아무 그자 입력</label
+      >
+      <input type="text" id="txt" pattern="[ㄱ-ㅎ가-힣0-9a-zA-Z]{1,4}" />
+      <button type="submit">전송</button>
+
+      <br />
+      <label for="text" id="">주민등록번호</label>
+      <input type="text" id="txt" pattern="[0-9]{6}[1-4]{1}[0-9]{6}" />
+      <button type="submit">전송</button>
+
+      <br />
+      <label for="text" id="">이메일</label>
+      <input
+        type="email"
+        id="txt"
+        pattern="[a-zA-Z0-9!#^]*\@[a-zA-Z0-9!#^]\.[a-zA-Z]*"
+      />
+      <button type="submit">전송</button>
+      <br />
+      <label for="text" id="">전화번호</label>
+      <input type="text" id="txt" pattern="(010|016|011)[0-9]{3,4}[0-9]{4}" />
+      <button type="submit">전송</button>
+    </form>
+  </body>
+</html>

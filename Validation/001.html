@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      span {
+        display: none;
+      }
+      input:required {
+        border: 3px solid blue;
+      }
+      input:required + span {
+        display: block;
+      }
+      input:invalid {
+        border: 3px solid red;
+      }
+      input:valid {
+        border: 5px solid lightskyblue;
+      }
+      input:required:invalid {
+        background-color: lightgrey;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <input type="number" required maxlength="5" max="9" min="3" />
+      <input type="text" required />
+      <span>필수입니다</span>
+      <input type="email" />
+      <input type="text" />
+      <input type="text" required />
+      <button type="submit">전송</button>
+    </form>
+  </body>
+</html>
